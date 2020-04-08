@@ -34,7 +34,7 @@ const blogposts = db
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
         // Push document into array every time the query loops over existing articles
-        blogpostsArray,push(doc.data());
+        blogpostsArray.push(doc.data());
     });
   })
   .catch( function(error) {
