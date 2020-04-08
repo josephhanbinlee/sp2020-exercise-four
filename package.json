@@ -11,19 +11,17 @@
     "type": "git",
     "url": "git+https://github.com/josephhanbinlee/sp2020-exercise-four.git"
   },
-
   "engine": {
     "node": "13.x"
   },
-
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/josephhanbinlee/sp2020-exercise-four/issues"
   },
-  
   "homepage": "https://github.com/josephhanbinlee/sp2020-exercise-four#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "firebase": "^7.13.2"
   }
 }
