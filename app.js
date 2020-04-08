@@ -26,12 +26,15 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore()
 
 // Get Blog Posts
+const blogpostsArray = [];
 const blogposts = db
   .collection('blogposts')
   .get()
   .then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
+        // Push document into array every time the query loops over existing articles
+        blogpostsArray,push(doc.data());
     });
   })
   .catch( function(error) {
@@ -39,9 +42,11 @@ const blogposts = db
   });
 
 // Create base route
-app.get('/', (req, res) => res.send('Data for Exercise Four'));
+app.get('/', (req, res) => res.send(blogpostsArray));
 
 // Set up app so that it runs when this file is run
 app.listen(port, () => 
     console.log(`Example app listening at http://localhost:${port}`)
 );
+
+// 
